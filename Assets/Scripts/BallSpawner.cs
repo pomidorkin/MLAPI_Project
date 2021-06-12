@@ -32,19 +32,7 @@ public class BallSpawner : NetworkBehaviour
 
         // We to spawn the ball and give the ownership to the player who spawned the ball
         ballInstnce.SpawnWithOwnership(OwnerClientId);
-
-        // Starting coroutine wich destroys the oject after fixed time
-            coroutine = DestroyObjectAfterTime(ballInstnce, 1f);
-            StartCoroutine(coroutine);
-    }
-
-    private IEnumerator DestroyObjectAfterTime(NetworkObject ballObject, float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-
-        // We call DestroyObjectAfterTime method on the server side so it doesn't need to be a server Rpc
-        // It is already on the server-side
-        ballObject.GetComponent<BallController>().Die();
+        ballInstnce.GetComponent<BallController>().Die();
     }
 
 }

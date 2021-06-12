@@ -5,6 +5,7 @@ using MLAPI;
 
 public class BallController : NetworkBehaviour
 {
+    private float destroyTime = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class BallController : NetworkBehaviour
     {
         if (IsOwner)
         {
-            Destroy(gameObject);
+            Destroy(gameObject, destroyTime);
         }
     }
 }

@@ -57,10 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\NetworkTransformPlayer.cs" />
+    <Compile Include="Assets\Scripts\BallController.cs" />
     <Compile Include="Assets\Scripts\PasswordNetworkManager.cs" />
     <Compile Include="Assets\Scripts\BallNetworkTransform.cs" />
     <Compile Include="Assets\Scripts\BallSpawner.cs" />
-    <Compile Include="Assets\Scripts\BallController.cs" />
+    <Compile Include="Assets\Scripts\ChoosePayerOnScene.cs" />
+    <Compile Include="Assets\Scripts\PerformActionOnPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
